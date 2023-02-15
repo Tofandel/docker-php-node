@@ -37,6 +37,7 @@ RUN docker-php-ext-install \
     soap \
     shmop \
     phar \
+    intl \
     gd exif fileinfo \
     opcache 
     
