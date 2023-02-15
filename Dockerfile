@@ -15,7 +15,7 @@ RUN apk add --update --no-cache \
 #gd
   libpng libpng-dev \
 #intl
-  libicu-dev
+  icu-dev
 
 #bzip2-dev
 
@@ -32,8 +32,6 @@ RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/
 # SimpleXML sodium sqlite3 standard tokenizer
 # xml xmlreader xmlwriter zlib
 
-RUN docker-php-ext-configure intl
-
 RUN docker-php-ext-install \
     pcntl posix \
     mysqli pdo_mysql \
@@ -41,17 +39,17 @@ RUN docker-php-ext-install \
     soap \
     shmop \
     phar \
-    intl \
     gd exif fileinfo \
     opcache 
     
-
+RUN docker-php-ext-configure intl && docker-php-ext-install intl
+    
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug pdo_mysql
 RUN echo 'xdebug.mode="coverage"' >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 RUN rm -rf /tmp/*
-RUN apk del libxml2-dev libzip-dev openssl-dev libpng-dev libicu-dev
+RUN apk del libxml2-dev libzip-dev openssl-dev libpng-dev icu-dev
 
 # Install other libs
 RUN apk add --update --no-cache \
