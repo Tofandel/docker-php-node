@@ -5,7 +5,7 @@ RUN echo "UTC" > /etc/timezone
 
 # Install essential build tools
 RUN apk add --update --no-cache \
-    g++ autoconf make curl \
+    g++ autoconf make curl linux-headers \
 #soap
   libxml2 libxml2-dev \
 #zip
