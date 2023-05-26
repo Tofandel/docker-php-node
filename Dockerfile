@@ -17,8 +17,6 @@ RUN apk add --update --no-cache \
 #intl
   icu-dev
 
-#bzip2-dev
-
 # Install composer
 ENV COMPOSER_HOME /composer
 ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
