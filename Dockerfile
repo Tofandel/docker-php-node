@@ -42,7 +42,7 @@ RUN docker-php-ext-install \
     
 RUN docker-php-ext-configure intl && docker-php-ext-install intl
     
-RUN pecl install xdebug
+RUN pecl install xdebug-3.1.5
 RUN docker-php-ext-enable xdebug pdo_mysql
 RUN echo 'xdebug.mode="coverage"' >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
