@@ -5,7 +5,7 @@ RUN echo "UTC" > /etc/timezone
 
 # Install essential build tools
 RUN apk add --update --no-cache \
-    g++ autoconf make curl linux-headers \
+    libstdc++ g++ autoconf make curl linux-headers \
 #soap
   libxml2 libxml2-dev \
 #zip
@@ -55,7 +55,6 @@ RUN apk add --update --no-cache \
     openssh-client \
     git bash
     
-RUN apk add libstdc++
 WORKDIR /opt
 RUN wget https://unofficial-builds.nodejs.org/download/release/v14.9.0/node-v14.9.0-linux-x64-musl.tar.gz
 RUN mkdir -p /opt/nodejs
@@ -64,7 +63,6 @@ RUN rm *.tar.gz
 RUN ln -s /opt/nodejs/bin/node /usr/local/bin/node
 RUN ln -s /opt/nodejs/bin/npm /usr/local/bin/npm
 RUN npm install --global yarn
-RUN apk del libstdc++
 
 SHELL ["/bin/bash", "-c"]
 ENTRYPOINT ["/bin/bash", "-l", "-c"]
