@@ -1,4 +1,4 @@
-FROM php:8.1-cli-alpine
+FROM php:7.4-cli-alpine
 
 # Optional, force UTC as server time
 RUN echo "UTC" > /etc/timezone
@@ -56,7 +56,7 @@ RUN apk add --update --no-cache \
     python3 \
     openssh-client \
     git bash \
-    npm yarn
+    npm=6.14.18 yarn
 
 SHELL ["/bin/bash", "-c"]
 ENTRYPOINT ["/bin/bash", "-l", "-c"]
