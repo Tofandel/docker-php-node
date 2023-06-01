@@ -47,7 +47,7 @@ RUN docker-php-ext-enable xdebug pdo_mysql
 RUN echo 'xdebug.mode="coverage"' >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 RUN rm -rf /tmp/*
-RUN apk del libxml2-dev libzip-dev openssl-dev libpng-dev icu-dev
+RUN apk del libxml2-dev libzip-dev openssl-dev libpng-dev
 
 # Install other libs
 RUN apk add --update --no-cache \
