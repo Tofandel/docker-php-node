@@ -53,7 +53,7 @@ RUN apk del libxml2-dev libzip-dev openssl-dev libpng-dev
 RUN apk add --update --no-cache \
     python2 \
     openssh-client \
-    git bash
+    git bash rsync
     
 WORKDIR /opt
 RUN wget https://unofficial-builds.nodejs.org/download/release/v14.9.0/node-v14.9.0-linux-x64-musl.tar.gz
