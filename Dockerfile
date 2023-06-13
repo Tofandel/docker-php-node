@@ -54,7 +54,7 @@ RUN apk del libxml2-dev libzip-dev openssl-dev libpng-dev icu-dev
 # Install other libs
 RUN apk add --update --no-cache \
     python3 \
-    openssh-client \
+    openssh-client rsync \
     git bash \
     npm yarn
 
