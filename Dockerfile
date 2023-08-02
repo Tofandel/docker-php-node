@@ -56,7 +56,7 @@ RUN apk add --update --no-cache \
     git bash rsync
     
 WORKDIR /opt
-RUN wget https://unofficial-builds.nodejs.org/download/release/v14.9.0/node-v14.9.0-linux-x64-musl.tar.gz
+RUN wget https://unofficial-builds.nodejs.org/download/release/v18.9.1/node-v18.9.1-linux-x64-musl.tar.gz
 RUN mkdir -p /opt/nodejs
 RUN tar -zxvf *.tar.gz --directory /opt/nodejs --strip-components=1
 RUN rm *.tar.gz
