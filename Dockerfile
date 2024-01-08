@@ -16,6 +16,7 @@ RUN apk add --update --no-cache \
   libpng libpng-dev \
 #intl
   icu-dev
+  
 #bzip2-dev
 
 # Install composer
