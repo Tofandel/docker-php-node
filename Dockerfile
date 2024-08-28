@@ -41,7 +41,8 @@ RUN docker-php-ext-install \
     phar \
     bcmath \
     gd exif fileinfo \
-    opcache 
+    opcache \
+    sockets
     
 RUN docker-php-ext-configure intl && docker-php-ext-install intl
     
