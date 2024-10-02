@@ -58,5 +58,7 @@ RUN apk add --update --no-cache \
     git bash \
     npm yarn
 
+RUN npm i -g pnpm
+
 SHELL ["/bin/bash", "-c"]
 ENTRYPOINT ["/bin/bash", "-l", "-c"]
