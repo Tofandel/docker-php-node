@@ -17,7 +17,7 @@ RUN apk add --update --no-cache \
 #intl
   icu-dev \
 #xsl
-  libxslt
+  libxslt-dev
 
 # Install composer
 ENV COMPOSER_HOME /composer
