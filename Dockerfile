@@ -39,8 +39,10 @@ RUN docker-php-ext-install \
     soap \
     shmop \
     phar \
+    bcmath \
     gd exif fileinfo \
-    opcache 
+    opcache \
+    sockets
     
 RUN docker-php-ext-configure intl && docker-php-ext-install intl
     
@@ -57,6 +59,8 @@ RUN apk add --update --no-cache \
     openssh-client rsync \
     git bash \
     npm yarn
+
+RUN npm i -g pnpm
 
 SHELL ["/bin/bash", "-c"]
 ENTRYPOINT ["/bin/bash", "-l", "-c"]
