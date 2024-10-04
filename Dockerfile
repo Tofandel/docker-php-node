@@ -40,7 +40,8 @@ RUN docker-php-ext-install \
     bcmath \
     gd exif fileinfo \
     opcache \
-    sockets
+    sockets \
+    xsl
     
 RUN docker-php-ext-configure intl && docker-php-ext-install intl
     
