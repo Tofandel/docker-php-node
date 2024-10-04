@@ -15,7 +15,9 @@ RUN apk add --update --no-cache \
 #gd
   libpng libpng-dev \
 #intl
-  icu-dev
+  icu-dev \
+#xsl
+  libxslt
 
 # Install composer
 ENV COMPOSER_HOME /composer
