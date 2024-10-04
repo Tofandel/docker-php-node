@@ -64,4 +64,4 @@ RUN apk add --update --no-cache \
 RUN npm i -g pnpm
 
 SHELL ["/bin/bash", "-c"]
-ENTRYPOINT ["/bin/bash", "-l"]
+ENTRYPOINT ["/bin/bash", "-l", "-c"]
