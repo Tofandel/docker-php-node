@@ -38,7 +38,6 @@ RUN docker-php-ext-install \
     zip \
     soap \
     shmop \
-    phar \
     bcmath \
     gd exif fileinfo \
     opcache \
