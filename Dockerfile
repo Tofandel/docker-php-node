@@ -58,7 +58,7 @@ RUN apk add --update --no-cache \
     python3 \
     openssh-client rsync \
     git bash \
-    npm yarn \
+    nodejs npm yarn \
     patch
 
 RUN npm i -g pnpm
